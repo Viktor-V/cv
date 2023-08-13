@@ -1,77 +1,106 @@
-\documentclass[helvetica,openbib,totpages]{europecv}
-\usepackage[T1]{fontenc}
-\usepackage{graphicx}
-\usepackage[a4paper,top=1.27cm,left=1cm,right=1cm,bottom=2cm]{geometry}
+% !TEX encoding = UTF-8
+% !TEX program = pdflatex
+% !TEX spellcheck = en_GB
+
+\documentclass[english,a4paper]{europasscv}
 \usepackage[english]{babel}
-\usepackage{bibentry}
-\usepackage{url}
-\usepackage{hyperref}
 
-\renewcommand{\ttdefault}{phv} % Uses Helvetica instead of fixed width font
+\usepackage[backend=biber,autolang=hyphen,sorting=none,style=numeric,maxbibnames=99,doi=false,isbn=false,maxcitenames=2]{biblatex}
+\usepackage{csquotes}
+\usepackage{europasscv-bibliography}
 
-\ecvname{\href{https://www.linkedin.com/in/viktors-vipolzovs-974aa0112/}{Vipolzov, Viktor}}
-\ecvfootername{\href{https://www.linkedin.com/in/viktors-vipolzovs-974aa0112/}{Viktor Vipolzov}}
+\bibliography{europasscv_example}
+% in the bibliography, mark all occurrences in bold:
+\ecvbibhighlight{Viktors}{Vipolzovs}{}
+
+\ecvname{Viktors Vipolzovs}
 \ecvaddress{Ceļinieku iela 8 - 42, Rīga, LV-1005, Latvia}
-\ecvtelephone{+371 29679004}
-\ecvemail{\url{viktor.vipolzov@gmail.com}}
-\ecvnationality{Latvian}
+\ecvmobile{+371 29679004}
+\ecvemail{viktor.vipolzov@gmail.com}
+\ecvhomepage{makeit.lv}
+\ecvgithubpage{https://github.com/Viktor-V https://github.com/makeitlv}
+% \ecvgithubpage{https://github.com/makeitlv}
+% \ecvgitlabpage{www.gitlab.com/makeitlv}
+\ecvlinkedinpage{https://www.linkedin.com/in/viktors-vipolzovs-974aa0112/}
+% \ecvorcid[label, link]{0000-0000-0000-0000}
+% \ecvim{AOL Messenger}{katie.smith}
+% \ecvim{Google Talk}{ksmith}
+
+% \ecvgender{Female}
 \ecvdateofbirth{8 June 1991}
-\ecvgender{male}
-\ecvpicture[width=2cm]{photo.jpg}
+\ecvnationality{Latvian}
+
+\ecvpicture[width=3.8cm]{photo.jpg}
+
+% \date{}
 
 \begin{document}
-\selectlanguage{english}
+  \begin{europasscv}
 
+  \ecvpersonalinfo
+  \ecvbigitem{Job applied for}{Senior PHP Developer}
 
-\begin{europecv}
-\ecvpersonalinfo[10pt]
-\ecvitem{\large\textbf{Desired employment/ Occupational~field}}{Senior PHP Developer}
+  \ecvsection{Work experience}
+  
+  \ecvtitle{June 2022 -- Present}{Full-Stack Developer, SIA  AGCSOFT}
+  \ecvtitle{January 2022 -- June 2022}{Senior PHP Developer, SIA  AGCSOFT}
+  \ecvtitle{April 2018 -- December 2021}{PHP Developer, SIA  Inbokss}
+  \ecvtitle{February 2016 -- April 2018}{PHP/Magento Developer, SIA  Scandiweb}
+  \ecvtitle{May 2015 -- February 2016}{Junior PHP Developer, SIA  Scandiweb}
+  
+  \ecvsection{Education and training}
 
-\ecvsection{Work experience}
-\ecvitem{Date}{2015 -- 2016}
-\ecvitem{Occupation or position held}{Junior PHP Developer, SIA  Scandiweb}
-\\
-\ecvitem{Date}{2016 -- 2018}
-\ecvitem{Occupation or position held}{PHP/Magento Developer, SIA  Scandiweb}
-\\
-\ecvitem{Date}{2018 -- 2021}
-\ecvitem{Occupation or position held}{PHP Developer, SIA  Inbokss}
-\\
-\ecvitem{Date}{2022 -- present}
-\ecvitem{Occupation or position held}{PHP Developer, SIA  AGCSOFT}
+  \ecvtitle{2016}{Magento Certified Developer Plus}
+  
+  \ecvtitle{2011 -- 2015}{Bachelor of Software Engineering}
+  \ecvitem{}{Transport and Telecommunication Institute}
+  
+  \pagebreak
+  
+  \ecvsection{Personal skills}
+  \ecvmothertongue{Russian}
+  \ecvlanguageheader
+  \ecvlanguage{Latvian}{C1}{C1}{B1}{B1}{B1}
+  \ecvlastlanguage{English}{B1}{B1}{A2}{A2}{B1}
+  \ecvlanguagefooter
+     
+  \ecvblueitem{Best knowledge}{
+  \begin{ecvitemize}
+    \item PHP 7/8
+    \item PHPUnit
+    \item Symfony 5/6
+    \item MySQL/MariaDB
+    \item HTML/Twig
+    \item CSS/SCSS
+    \item JavaScript/TypeScript
+    \item React
+    \item Docker
+  \end{ecvitemize}
+  }
 
-\ecvsection{Education and training}
-\ecvitem{Dates}{2011 - 2015}
-\ecvitem{Title of qualification awarded}{Bachelor}
-\ecvitem{Principal subjects/Occupational skills covered}{Software Engineering (Programming)}
-\ecvitem{Name and type of organization providing education and training}{Transport and Telecommunication Institute}
-\\
-\ecvitem{Dates}{2016}
-\ecvitem{Title of qualification awarded}{Magento Certified Developer Plus}
+  \ecvblueitem{Also known}{
+  \begin{ecvitemize}
+    \item Laravel
+    \item Phalcon
+    \item PostgreSQL
+    \item CI/CD
+    \item Nginx
+    \item RabbitMQ
+    \item Redis
+    \item Psalm
+    \item PHPStan
+  \end{ecvitemize}
+  }
 
-\newpage
+  \ecvblueitem{Operating Systems}{GNU/Linux, Windows (WSL2)}
 
-\ecvsection{Personal skills and~competences}
+  \ecvblueitem{IDE \& Text Editor}{PHPStorm, VS Code, Vim, Nano}
 
-\ecvmothertongue[5pt]{Russian}
-\ecvitem{\large Other language(s)}{Latvian, English}
+  \ecvblueitem{Driving licence}{B}
+  
+  \nocite{*}
+  \renewcommand{\section}[2]{\ecvsection{#2}}
 
-%\ecvlanguageheader{(*)}
-\ecvlanguageheader{}
-\ecvlanguage{Latvian}{C1}{C1}{B1}{B1}{B1}
-\ecvlanguage{English}{B1}{B1}{A2}{A2}{B1}
-%\ecvlanguagefooter[10pt]{(*)}
-
-\ecvsection{Computer skills and competences}
-\ecvitem{\large Best knowledge}{PHP 5.6/7.x/8.x, Symfony, MySQL/MariaDB, HTML/Twig, CSS/SCSS, JavaScript}
-\\
-\ecvitem{Also known}{Laravel, StimulusJS, Docker, GitLab CI/CD, Traefik, Nginx, Nginx Unit, Redis, RabbitMQ, PHPUnit, Psalm, PHPStan}
-\\
-\ecvitem{Operating Systems}{GNU/Linux, Windows (WSL2)}
-\\
-\ecvitem{IDE \& Text Editor}{PHPStorm, SublimeText, Vim, Nano}
-\\
-\ecvitem{Version Control}{Git}
-
-\end{europecv}
+\end{europasscv}
+  
 \end{document}
